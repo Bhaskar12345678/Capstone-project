@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home Page - Blog Generator</title>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+  <!------ Include the above in your HEAD tag ---------->
+
+  <!-- Custom styles for this template -->
+  <link href="home.css" rel="stylesheet">
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('.input').focus(function() {
+        $(this).parent().find(".label-txt").addClass('label-active');
+      });
+
+      $(".input").focusout(function() {
+        if ($(this).val() == '') {
+          $(this).parent().find(".label-txt").removeClass('label-active');
+        };
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <form>
+    <h1 class="h3 mb-3 font-weight-normal">
+      BLOG GENERATOR ---
+      <hr>
+    </h1>
+
+    <label>
+      <div class="form-group">
+        <p class="label-txt">Blog topic</p>
+        <select id="blogType" class="custom-select custom-select-lg mb-3 mr-sm-2">
+          <option selected>Blog type</option>
+          <option value="1">Travel Blogs</option>
+          <option value="2">Scientific Blogs</option>
+          <option value="3">Political blogs</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </div>
+    </label>
+
+    <label>
+      <div class="form-group">
+        <p class="label-txt">Blog Seed Text</p>
+        <input type="text" id="seedText" class=="mb-3">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </div>
+    </label>
+
+    <button type="submit" id="btn_submit" disabled="true">submit</button>
+    <label>
+      <div class="form-group">
+        <p class="label-txt">Generated Blog </p><br>
+      </div>
+      <div class="line-box">
+        <div class="line"></div>
+
+
+        <div class="container">
+          <span>
+            <div class="jumbotron">
+              <h1 class="display-4">RNN Based Generation</h1>
+              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-4">
+            </div>
+          </span>
+        </div>
+        <div class="container">
+          <span>
+            <div class="jumbotron">
+              <h1 class="display-4">LSTM Based Generation</h1>
+              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-4">
+            </div>
+          </span>
+        </div>
+        <div class="container">
+
+          <span>
+            <div class="jumbotron">
+              <h1 class="display-4">GRU Based Generation</h1>
+              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-4">
+            </div>
+          </span>
+        </div>
+
+        <div class="container">
+
+          <span>
+            <div class="jumbotron">
+              <h1 class="display-4">GPT-2 Based Generation - this the most advanced and latest text generation technique</h1>
+              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-4">
+            </div>
+          </span>
+        </div>
+
+  </form>
+
+  <script type="text/javascript" src="home.js"></script>
+
+</body>
+
+</html>

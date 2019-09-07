@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content="">
+  <meta name="author" content="Bhaskar Mahna">
+
+  <title>Blog Generator - Login</title>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+  <!------ Include the above in your HEAD tag ---------->
+
+
+  <!-- Custom styles for this template -->
+  <link href="registration.css" rel="stylesheet">
+
+  <script type="text/javascript">
+          $(function() {
+
+                 if (localStorage.chkbx && localStorage.chkbx != '') {
+                     $('#inputRemeberMe').attr('checked', 'checked');
+                     $('#inputEmail').val(localStorage.usrname);
+                     $('#inputPassword').val(localStorage.pass);
+                    $(this).parent().find(".label-txt").addClass('label-active');
+                 } else {
+                     $('#inputRemeberMe').removeAttr('checked');
+                     $('#inputEmail').val('');
+                     $('#inputPassword').val('');
+                     $(this).parent().find(".label-txt").removeClass('label-active');
+                 }
+
+                 $('#inputRemeberMe').click(function() {
+                    $(this).parent().find(".label-txt").addClass('label-active');
+                     if ($('#inputRemeberMe').is(':checked')) {
+                         // save username and password
+                         localStorage.usrname = $('#inputEmail').val();
+                         localStorage.pass = $('#inputPassword').val();
+                         localStorage.chkbx = $('#inputRemeberMe').val();
+
+                     } else {
+
+                         localStorage.usrname = '';
+                         localStorage.pass = '';
+                         localStorage.chkbx = '';
+                     }
+                 });
+             });
+
+
+
+  $(document).ready(function(){
+
+    $('.input').focus(function(){
+      $(this).parent().find(".label-txt").addClass('label-active');
+    });
+
+    $(".input").focusout(function(){
+      if ($(this).val() == '') {
+        $(this).parent().find(".label-txt").removeClass('label-active');
+      };
+    });
+
+
+   });
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <form class="form-signin">
+
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label>
+      <p class="label-txt">ENTER YOUR EMAIL</p>
+      <input type="email" class="input" id="inputEmail" required>
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+    <label>
+      <p class="label-txt">PASSWORD</p>
+      <input type="password" class="input" id="inputPassword" minlength=5 maxlength="10" required
+      >
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+    <label>
+      <p class="label-txt">REMEMBER ME</p>
+      <input type="checkbox" value="remember-me" id="inputRemeberMe">
+
+    </label>
+
+    <button type="submit" id="btn_submit" onclick="valSubmit();">submit</button>
+    <label>
+        <p class="label-txt">new user? <a href="sources/Register/registration.html">create new account</a></p>
+    </label>
+  </form>
+
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>

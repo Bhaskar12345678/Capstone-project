@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Blog Generator - Register User</title>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+  <!------ Include the above in your HEAD tag ---------->
+
+  <!-- Custom styles for this template -->
+  <link href="registration.css" rel="stylesheet">
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('.input').focus(function() {
+        $(this).parent().find(".label-txt").addClass('label-active');
+      });
+
+      $(".input").focusout(function() {
+        if ($(this).val() == '') {
+          $(this).parent().find(".label-txt").removeClass('label-active');
+        };
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <form>
+    <h1 class="h3 mb-3 font-weight-normal">Register!!!</h1>
+
+    <label>
+      <p class="label-txt">ENTER YOUR EMAIL</p>
+      <input type="email" class="input" id="email" required>
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+    <label>
+      <p class="label-txt">ENTER YOUR NAME</p>
+      <input type="text" class="input" id="name" required>
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+    <label>
+      <p class="label-txt">ENTER YOUR PASSWORD</p>
+      <input type="password" name="password" class="input" id="txt_password" minlength="5" maxlength="10" required>
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+    <label>
+      <p class="label-txt">CONFIRM PASSWORD</p>
+      <input type="password" class="input" name="password" id="txt_confirm_password" minlength="5" maxlength="10" required>
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+    <label>
+      <div id="divCheckPasswordMatch">
+
+      </div>
+    </label>
+
+    <label>
+      <div id="divCheckPasswordMatch">
+
+      </div>
+    </label>
+
+    <label>
+      <div id="divCheckPasswordMatch">
+
+      </div>
+    </label>
+    <label>
+      <span><input type="checkbox" id="inputDeclaration"></span>
+      <span>I declare, I accept the site's <a href="#ex1" rel="modal:open"> Privacy Policy.</a></span>
+    </label>
+
+    <button type="submit" id="btn_submit" disabled="true">submit</button>
+
+    <!-- Modal HTML embedded directly into document -->
+    <div id="ex1" class="modal">
+      <div class="card example-1 square scrollbar-dusty-grass square thin">
+        <div class="card-body">
+          <p>
+            I. ACCEPTANCE OF TERMS </p>
+          <p>
+            II. DEFINITIONS </p>
+          User
+          Content
+          Third Party
+          <p> III. CHANGES TO THE TERMS</p>
+          <p>IV. ELIGIBILITY TO USE THE SERVICES</p>
+          <p>
+            V. TRANSLATION OF THE TERMS </p>
+          <p>
+            VI. PROVISION OF THE SERVICES BEING OFFERED BY BLOGGEN
+          </p>
+          <p>
+            VII. USE OF SERVICES BY YOU OR USER
+          </p>
+          <p>
+            VIII. CONTENT
+            Ownership of BLOGGEN Content and Proprietary Rights
+            Your License to BLOGGEN Content:
+            BLOGGEN License to Your or User Content:
+            Representations Regarding Your or User Content:
+            Content Removal.
+            Third Party Content and Links
+            User Reviews & complaints
+          </p>
+          <p>
+            IX. RESTRICTIONS ON USE
+          </p>
+          <p>
+            X. ADVERTISING
+          </p>
+          <p>
+            XI. DISCLAIMER OF WARRANTIES, LIMITATION OF LIABILITY, AND INDEMNIFICATION
+            Disclaimer of Warranties
+            Limitation of Liability
+            Indemnification
+          </p>
+          <p>
+            XII. TERMINATION OF YOUR ACCESS TO THE SERVICES
+          </p>
+          <p>
+            XIII. GENERAL TERMS
+          </p>
+          <p>
+            XIV. NOTICE OF COPYRIGHT INFRINGEMENT AND GRIEVANCE REDRESSAL MECHANISM
+          </p>
+          <p>
+            XVI. Contact us
+            If you have any queries relating to your Privacy Policy, you may email us at info@bloggen.com or write at the following address:
+            For Users residing in the India:
+            BLOGGEN.com
+            C/O Bhaskar Solutions private limited
+            Evoma Business center
+            The Address, B-175, F.F., Shivalik Colony, Near Malviya Nagar, New Delhi, Delhi
+            Email address: info@bloggen.com
+          </p>
+
+          Thanks for clicking. That felt good.
+
+        </div>
+      </div>
+      <a href="#" rel="modal:close">Close</a>
+    </div>
+
+  </form>
+
+
+  <script type="text/javascript" src="registeration.js"></script>
+
+</body>
+
+
+</html>
